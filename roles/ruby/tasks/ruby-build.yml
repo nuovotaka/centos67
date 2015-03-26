@@ -1,0 +1,12 @@
+---
+# install ruby-build tasks
+
+- name: check ruby-build installed
+  stat: path={{ ruby_build_path }}
+  register: rbuild_present
+  sudo: no
+
+- name: git clone ruby-build
+  git: repo={{ ruby_build_repo }} dest=/home/vagrant/.rbenv/plugins/ruby-build
+  when: rbuild_present.stat.exists == false
+  sudo: no

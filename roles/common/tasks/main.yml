@@ -1,0 +1,18 @@
+---
+# Common tasks
+
+- name: yum update
+  yum: name=* state=latest
+- name: disable iptables
+  service: name=iptables state=stopped enabled=no
+- name: install libselinux-python
+  yum: name=libselinux-python state=latest
+- name: remove localtime
+  file: path=/etc/localtime state=absent
+- name: change timezone
+  file: src=/usr/share/zoneinfo/Asia/Tokyo dest=/etc/localtime state=link force=yes mode=0644
+- name: change locale
+  command: sed -i "s/en_US/ja_JP/g" /etc/sysconfig/i18n
+- name: install remi repository
+#  command: rpm -Uvh --force {{ remi_repository }}
+  yum: name={{ remi_repository }} state=present

@@ -1,0 +1,16 @@
+---
+# install rbenv
+
+- name: check rbenv installed
+  stat: path={{ rbenv_path }}
+  register: rbenv_present
+  sudo: no
+
+- name: git clone rbenv
+  git: repo={{ rbenv_repo }} dest=/home/vagrant/.rbenv
+  when: rbenv_present.stat.exists == false
+  sudo: no
+
+- name: update bash_profile
+  copy: src=bash_profile.custom dest=/home/vagrant/.bash_profile backup=yes
+  sudo: no

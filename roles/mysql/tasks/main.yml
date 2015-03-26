@@ -1,0 +1,9 @@
+---
+# MySQL tasks
+
+- name: install mysql
+  yum: name=mysql-server enablerepo=remi,epel state=present
+- name: copy my.cnf.custom
+  copy: src=my.cnf.custom dest=/etc/my.cnf backup=yes
+- name: start mysql and enabled
+  service: name=mysqld state=started enabled=yes

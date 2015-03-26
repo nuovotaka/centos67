@@ -1,0 +1,5 @@
+---
+# Handler to handle php notifications.
+
+- name: restart apache
+  service: name=httpd state=restarted

@@ -1,0 +1,7 @@
+---
+# install ruby_base, rbenv, ruby-build, ruby
+
+- include: ruby_base.yml
+- include: rbenv.yml
+- include: ruby-build.yml
+- include: ruby.yml
