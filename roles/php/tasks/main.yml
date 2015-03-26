@@ -1,0 +1,18 @@
+---
+# install php
+
+- name: install php
+  yum: name={{item}} enablerepo=remi,epel state=present
+  with_items:
+    - php
+    - php-devel
+    - php-mysql
+    - php-mbstring
+    - php-gd
+  notify:
+    - restart apache
+
+- name: copy php.ini.custom
+  copy: src=php.ini.custom dest=/etc/php.ini backup=yes
+  notify:
+    - restart apache

@@ -1,0 +1,25 @@
+---
+# install ruby dependencies
+
+- name: install ruby dependencies
+  yum: name={{item}} enablerepo=remi,epel state=present
+  with_items:
+    - gcc
+    - openssl-devel
+    - rpm-build
+    - gcc-c++
+    - bzip2
+    - libtool
+    - zlib
+    - zlib-devel
+    - httpd-devel
+    - openssl-devel
+    - curl-devel
+    - ncurses-devel
+    - gdbm-devel
+    - readline
+    - readline-devel
+    - sqlite-devel
+    - libyaml-devel
+    - libffi-devel
+    - bison
