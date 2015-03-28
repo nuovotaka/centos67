@@ -21,3 +21,7 @@ git clone https://github.com/nuovotaka/centos65.git
 cd centos65
 ./run.sh
 ```
+
+Attention 
+Apache Only IP address 
+localhost, 127,0,0,1 , 192,168,xxx,xxx
