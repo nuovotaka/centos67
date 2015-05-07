@@ -1,7 +1,7 @@
 ---
 # Variables listed here.
 
-ruby_version: 2.2.1
+ruby_version: 2.2.2
 # remi Repository Distribute
 # remi_repository: http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 # remi Repository Mirror in Japan
