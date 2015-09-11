@@ -1,7 +1,7 @@
 ---
 # Variables listed here.
 
-ruby_version: 2.2.2
+ruby_version: 2.2.3
 # remi Repository Distribute
 # remi_repository: http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
 # remi Repository Mirror in Japan
@@ -10,4 +10,4 @@ rbenv_path: /home/vagrant/.rbenv
 ruby_build_path: /home/vagrant/.rbenv/plugins/ruby-build
 rbenv_repo: https://github.com/sstephenson/rbenv.git
 ruby_build_repo: https://github.com/sstephenson/ruby-build.git
-gem_system: 2.4.6
+gem_system: 2.4.8
