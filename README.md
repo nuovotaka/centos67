@@ -8,7 +8,7 @@ vagrant up
 vagrant ssh
 sudo yum -y install git
 git clone https://github.com/nuovotaka/centos67.git
-cd centos6
+cd centos67
 ./run.sh
 exec $SHELL -l
 ```
@@ -22,6 +22,6 @@ cd centos67
 ./run.sh
 ```
 
-Attention 
-Apache Only IP address 
+Attention
+Apache Only IP address
 localhost, 127,0,0,1 , 192,168,xxx,xxx
